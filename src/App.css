@@ -139,3 +139,167 @@ body{
   text-align: left;
   width: 180px;
 }
+.sort,.sort1{
+  float: left;
+  
+}
+.sort1{
+  float: left;
+  color: white;
+  margin-left: 500px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 900px){
+  .App {
+
+    font-size:8px;
+
+  }
+  body{
+    background-color: rgb(255, 255, 255);
+  }
+  .header{
+    font-size: 15px;
+    text-align: center;
+    color:rgb(43, 225, 238);
+    height: 30px;
+    padding: 3px;
+    background-color: rgb(6, 16, 54);
+  
+  }
+  .checkbox{
+    position: absolute;
+    float: left;
+    margin-left: 6%;
+    font-size: 10px;
+    margin-top: 30px;
+  }
+  .hydranet{
+    font-size: 15px;
+    margin-left: 6%;
+    position: relative;
+    float: left;
+  }
+  .hdxlogo{
+    position: relative;
+    float: left;
+    height: 25px;
+    width: 25px;
+    margin-top: 4px;
+    margin-left: 6px;
+  }
+  .Navbar{
+    background-color: #020730;
+    height: 35px;
+    color:azure;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  .nav{
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    font-size:10px;
+    font-size: 15px;
+    }
+  .navs{
+    float: right;
+    float: top;
+    margin-right: 20%;
+    
+  }
+  .navnumber{
+    position: absolute;
+    float: bottom;
+    margin-top: 30px;
+    margin-left: 20px;
+    color: rgb(192, 255, 255);
+    
+  }
+  .navtext{
+    position: relative;
+    float: top;
+    font-size:8px;
+    color: rgb(1, 183, 183);
+  }
+  .btn-primary{
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    margin-right: 6%;
+    margin-top: 4px;
+  }
+  .bodyhdx{
+    display: block;
+    float: left;
+    height: 1500px;
+    width: 100%;
+  }
+  .bodyshdx{
+    display: none;
+    float: left;
+    height: 1500px;
+    width: 100%;
+  }
+  .bodyghdx{
+    display: none;
+    float: left;
+    height: 1500px;
+    width: 100%;
+  }
+  .body0{
+    float: left;
+    height: 30px;
+    width: 100%;
+    background-color: rgb(45, 45, 165);
+  }
+  body{
+    background-color: rgb(15, 15, 45);
+  }
+  .line{
+    float: left;
+    height: 20px;
+    width: 100%;
+    background-color: rgb(15, 15, 45);
+    font-size:7px;
+    margin-left: 0px;
+  }
+  .line1{
+    float: left;
+    height: 25px;
+    width: 100%;
+    background-color: rgb(15, 15, 45);
+    font-size: 6px;
+    margin-left:0px;
+    border-bottom: 2px solid white;
+    margin-bottom: 5px;
+  }
+  .address, .amount,.order{
+    color: white;
+    float: left;
+    margin-left: 0px;
+    width: 50px;
+  }
+  .order{
+    width: 20px;
+  }
+  .address{
+    width: 160px;
+    margin-right: 10px;
+  }
+  .amount{
+    text-align: left;
+    width: 45px;
+  }
+  .sort,.sort1{
+    float: left;
+    
+  }
+  .sort1{
+    float: left;
+    color: white;
+    margin-left: 00px;
+    font-size: 8px;
+  }
+}

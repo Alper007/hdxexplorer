@@ -27,7 +27,42 @@ function App() {
   var _HdxToken = new web3.eth.Contract(HDX_ABI, ADDRESS);
 
   useEffect(()=>{
+    
+      // _HdxToken.events.Transfer( (from,to,value,event ) => {
+      //   let info = {
+      //     from: from,
+      //     to: to,
+      //     value: value,
+      //     data: event,
+      //   } 
+      //   console.log(JSON.stringify(info , null, 4));
+      //  }
+     
+    //  _HdxToken.events.Transfer(options)
+    // .on('data', event => console.log(event))
+    // .on('data', (from,to,value,event ) => {
+    //   let info = {
+    //     from: from,
+    //     to: to,
+    //     value: value,
+    //     data: event,
+    //   } 
+    //   console.log(JSON.stringify(info , null, 4));
+    //  })
+    // .on('changed', changed => console.log(changed))
 
+    // .on('connected', str => console.log(str))
+
+  //   _HdxToken.events.Transfer({}, 
+  //     function(error, event){ console.log(event); })
+  // .on("connected", function(subscriptionId){
+  //     console.log(subscriptionId);
+  // })
+  // .on('data', function(event){
+  //     console.log(event); // same results as the optional callback above
+  // })
+
+  // _HdxToken.events.Transfer({ fromBlock: 'latest' }, console.log)
     addhdx()
     },[]);
 
@@ -37,17 +72,7 @@ function App() {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-//   const addAddress = async () => {
-//    _HdxToken.events.Transfer( (from,to,value,event ) => {
-//     let info = {
-//       from: from,
-//       to: to,
-//       value: value,
-//       data: event,
-//     } 
-//     console.log(JSON.stringify(info , null, 4));
-//    })
-//  }
+
 //  fetch('https://api.coingecko.com/api/v3/coins/hydranet/tickers')
 //  .then( a => a.json())
 //  .then( b => {console.log(b.tickers[0].last.toString().substr(0,6))})
@@ -251,10 +276,49 @@ var allobj = {
   // var add3 = 1;
 
   allmap.sort(function(a, b){return b.all - a.all});
+  
+  const changeCoin = (x) => {
+    var bodyhdx = document.getElementById('bodyhdx')
+    switch (x) {
+      case "hdxmap":
+        allmap.sort(function(a, b){return b.hdx - a.hdx});
+        while(bodyhdx.firstChild){
+          bodyhdx.firstChild.remove()
+        }
+        add1 = 1;
+        addhdx()
+      return;
+      case "shdxmap":
+        allmap.sort(function(a, b){return b.shdx - a.shdx});
+        while(bodyhdx.firstChild){
+          bodyhdx.firstChild.remove()
+        }
+        add1 = 1;
+        addhdx()
+      return;
+      case "ghdxmap":
+        allmap.sort(function(a, b){return b.ghdx - a.ghdx});
+        while(bodyhdx.firstChild){
+          bodyhdx.firstChild.remove()
+        }
+        add1 = 1;
+        addhdx()
+      return;
+      case "allmap":
+        allmap.sort(function(a, b){return b.all - a.all});
+        while(bodyhdx.firstChild){
+          bodyhdx.firstChild.remove()
+        }
+        add1 = 1;
+        addhdx()
+      return;
+      default: 
+      return;
+    }
+  }
 
   const addhdx = () =>{
     allmap.forEach((element)=>{
-
         var bodyhdx = document.getElementById('bodyhdx')
         // var bodyshdx = document.getElementById('bodyshdx')
         // var bodyghdx = document.getElementById('bodyghdx')
@@ -306,32 +370,6 @@ var allobj = {
   })}
  
 
-  // const changeCoin = (x) => {
-  //   var bodyhdx = document.getElementById('bodyhdx')
-  //   var bodyshdx = document.getElementById('bodyshdx')
-  //   var bodyghdx = document.getElementById('bodyghdx')
-  //   var bodyall = document.getElementById('bodyall')
-  //   bodyshdx.style.display = "none"
-  //   bodyhdx.style.display = "none"
-  //   bodyghdx.style.display = "none"
-  //   bodyall.style.display = "none"
-  //   switch (x) {
-  //     case "hdxmap":
-  //       bodyhdx.style.display = "block"
-  //     return;
-  //     case "shdxmap":
-  //       bodyshdx.style.display = "block"
-  //     return;
-  //     case "ghdxmap":
-  //       bodyghdx.style.display = "block"
-  //     return;
-  //     case "allmap":
-  //       bodyall.style.display = "block"
-  //     return;
-  //     default: 
-  //     return;
-  //   }
-  // }
 
 
 
@@ -341,7 +379,7 @@ var allobj = {
             <div className='hydranet'>HYDRANET</div>
             <div ><img className='hdxlogo'src='https://i.hizliresim.com/ocna173.png'/></div>
           <div className='navs'>
-          <div className='nav'>
+          {/* <div className='nav'>
             <div className='navtext'>Total Supply:</div>
             <div className='navnumber'>{totalHdx} </div>
           </div>
@@ -352,15 +390,17 @@ var allobj = {
           <div className='nav'>
             <div className='navtext'>Staked Ratio:</div>
             <div className='navnumber'> {stakedHdx}</div>
-          </div>
+          </div> */}
           </div>
 
       </div>
       <div className='body0' id='body0' >
-        {/* <button onClick={()=>{changeCoin("hdxmap"); setCoin("HDX")}}>hdx</button>
-        <button onClick={()=>{changeCoin("shdxmap"); setCoin("SHDX")}}>shdx</button>
-        <button onClick={()=>{changeCoin("ghdxmap"); setCoin("GHDX")}}>ghdx</button>
-        <button onClick={()=>{changeCoin("allmap"); setCoin("ALL")}}>hdx+shdx+(ghdx*1.42)</button> */}
+        <div className='sort1'>SORT BY:</div>
+        <button className='sort' onClick={()=>{changeCoin("allmap"); setCoin("ALL")}}>hdx+shdx+(ghdx*1.42)</button>
+        <button className='sort' onClick={()=>{changeCoin("shdxmap"); setCoin("SHDX")}}>shdx</button>
+        <button className='sort' onClick={()=>{changeCoin("hdxmap"); setCoin("HDX")}}>hdx</button>
+        <button className='sort' onClick={()=>{changeCoin("ghdxmap"); setCoin("GHDX")}}>ghdx</button>
+        
       </div>
       <div className="line1">
           <div className="order">RANK</div>
