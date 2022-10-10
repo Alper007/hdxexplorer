@@ -133,6 +133,7 @@ body{
 }
 .address{
   width: 400px;
+  margin-right: 20px;
 }
 .amount{
   text-align: left;
