@@ -362,7 +362,7 @@ var allobj = {
         <button onClick={()=>{changeCoin("ghdxmap"); setCoin("GHDX")}}>ghdx</button>
         <button onClick={()=>{changeCoin("allmap"); setCoin("ALL")}}>hdx+shdx+(ghdx*1.42)</button> */}
       </div>
-      <div className="line">
+      <div className="line1">
           <div className="order">RANK</div>
           <div className="address">ADDRESS</div>
           <div className="amount">hdx+shdx+(ghdx*1.42)</div>

@@ -112,10 +112,20 @@ body{
   font-size: 15px;
   margin-left: 40px;
 }
+.line1{
+  float: left;
+  height: 25px;
+  width: 100%;
+  background-color: rgb(15, 15, 45);
+  font-size: 15px;
+  margin-left: 40px;
+  border-bottom: 2px solid white;
+  margin-bottom: 5px;
+}
 .address, .amount,.order{
   color: white;
   float: left;
-  margin-left: 50px;
+  margin-left: 10px;
   width: 200px;
 }
 .order{
@@ -126,5 +136,5 @@ body{
 }
 .amount{
   text-align: left;
-  width: 100px;
+  width: 180px;
 }
