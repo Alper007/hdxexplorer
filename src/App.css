@@ -98,7 +98,7 @@ body{
 }
 .body0{
   float: left;
-  height: 35px;
+  height: 40px;
   background-color: rgb(15, 15, 45);
   width: 85%;
   margin-left: 10%;
@@ -108,7 +108,7 @@ body{
 }
 .line{
   float: left;
-  height: 20px;
+  height: 22px;
   width: 85%;
   background-color: rgb(15, 15, 45);
   font-size: 15px;
@@ -135,14 +135,21 @@ body{
 }
 .address{
   width: 400px;
-  margin-right: 20px;
+
 }
 .amount{
   float: left;
   text-align: left;
-  width: 130px;
+  width: 125px;
 }
 .amount1{
+  float: left;
+  text-align: left;
+  width: 150px;
+  margin-right: 10px;
+  margin-left: 35px;
+}
+.amount1t{
   float: left;
   text-align: left;
   width: 180px;
