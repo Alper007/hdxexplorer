@@ -15,56 +15,45 @@ var Web3 = require('web3')
 function App() {
  
   const [check, setCheck] = useState(true);
-  const [blockNumber, setBlockNumber] = useState("");
-  const [balances, setBalances] = useState([]);
+
+
   const [coin,setCoin] = useState("HDX")
 
   const [totalHdx, setTotalHdx] = useState("");
   const [stakedHdx, setStakedHdx] = useState("");
 
-  const rpcURL = "https://arb-mainnet.g.alchemy.com/v2/h4bsS1_3SZC0JOou9tz3xgg-fvrnG5-U"
-  var web3 = new Web3(rpcURL);
-  var _HdxToken = new web3.eth.Contract(HDX_ABI, ADDRESS);
+      const rpcURL = "https://arb-mainnet.g.alchemy.com/v2/h4bsS1_3SZC0JOou9tz3xgg-fvrnG5-U"
+      var web3 = new Web3(rpcURL);
+      var _HdxToken = new web3.eth.Contract(HDX_ABI, ADDRESS);
 
   useEffect(()=>{
     
-      // _HdxToken.events.Transfer( (from,to,value,event ) => {
-      //   let info = {
-      //     from: from,
-      //     to: to,
-      //     value: value,
-      //     data: event,
-      //   } 
-      //   console.log(JSON.stringify(info , null, 4));
-      //  }
-     
-    //  _HdxToken.events.Transfer(options)
-    // .on('data', event => console.log(event))
-    // .on('data', (from,to,value,event ) => {
-    //   let info = {
-    //     from: from,
-    //     to: to,
-    //     value: value,
-    //     data: event,
-    //   } 
-    //   console.log(JSON.stringify(info , null, 4));
-    //  })
-    // .on('changed', changed => console.log(changed))
-
-    // .on('connected', str => console.log(str))
-
-  //   _HdxToken.events.Transfer({}, 
-  //     function(error, event){ console.log(event); })
-  // .on("connected", function(subscriptionId){
-  //     console.log(subscriptionId);
-  // })
-  // .on('data', function(event){
-  //     console.log(event); // same results as the optional callback above
-  // })
-
+  
   // _HdxToken.events.Transfer({ fromBlock: 'latest' }, console.log)
     addhdx()
     },[]);
+    var blockNumber = 29528645;
+
+    // setInterval(() => {
+    //   web3.eth.getBlockNumber().then((a)=>{
+    //     addtx(a)
+    //   });
+    // }, 60000);
+
+
+    // const addtx = (a) => {
+    //   _HdxToken.getPastEvents('Transfer', {
+    //   fromBlock: blockNumber,
+    //   latest: a
+    // })
+    // .then((results) => {
+
+    //   blockNumber = a
+    //   console.log(a)
+    //   console.log(blockNumber)
+    // })
+    // .catch(err => console.log(err))
+    // }
 
 
 
@@ -345,7 +334,7 @@ var allobj = {
         // }
         divinfo2.className = "address"
         divinfo2.textContent = element.address;
-        divinfo3.className = "amount"
+        divinfo3.className = "amount1"
         divinfo3.textContent = comma((element.all).toString());
         divinfo4.className = "amount"
         divinfo4.textContent = comma((element.shdx).toString());
@@ -396,28 +385,37 @@ var allobj = {
       </div>
       <div className='body0' id='body0' >
         <div className='sort1'>SORT BY:</div>
-        <button className='sort' onClick={()=>{changeCoin("allmap"); setCoin("ALL")}}>hdx+shdx+(ghdx*1.42)</button>
-        <button className='sort' onClick={()=>{changeCoin("shdxmap"); setCoin("SHDX")}}>shdx</button>
-        <button className='sort' onClick={()=>{changeCoin("hdxmap"); setCoin("HDX")}}>hdx</button>
-        <button className='sort' onClick={()=>{changeCoin("ghdxmap"); setCoin("GHDX")}}>ghdx</button>
+        <div className='sort1'>
+            <button className='sort' onClick={()=>{changeCoin("allmap"); setCoin("ALL")}}>hdx+shdx+(ghdx*1.42)</button>
+        </div>
+        <div className='sort1'>
+          <button className='sort' onClick={()=>{changeCoin("shdxmap"); setCoin("SHDX")}}>shdx</button>
+        </div>
+        <div className='sort1'>
+            <button className='sort' onClick={()=>{changeCoin("hdxmap"); setCoin("HDX")}}>hdx</button>
+        </div>
+        <div className='sort1'>
+          <button className='sort' onClick={()=>{changeCoin("ghdxmap"); setCoin("GHDX")}}>ghdx</button>
+        </div>
         
       </div>
-      <div className="line1">
+        <div className="line1">
           <div className="order">RANK</div>
           <div className="address">ADDRESS</div>
-          <div className="amount">hdx+shdx+(ghdx*1.42)</div>
+          <div className="amount1">HDX+SHDX+(GHDX*1.42)</div>
           <div className="amount">SHDX</div>
           <div className="amount">HDX</div>
           <div className="amount">GHDX</div>
       </div>
       <div className='bodyhdx' id='bodyhdx' >
+  
       </div>
-      <div className='bodyshdx' id='bodyshdx' >
+      {/* <div className='bodyshdx' id='bodyshdx' >
       </div>
       <div className='bodyghdx' id='bodyghdx' >
       </div>
       <div className='bodyall' id='bodyall' >
-      </div>
+      </div> */}
     </div>
   );
 }

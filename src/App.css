@@ -24,7 +24,7 @@ body{
 }
 .hydranet{
   font-size: 33px;
-  margin-left: 6%;
+  margin-left: 10%;
   position: relative;
   float: left;
 }
@@ -81,7 +81,8 @@ body{
   display: block;
   float: left;
   height: 1500px;
-  width: 100%;
+  width: 85%;
+  margin-left: 10%;
 }
 .bodyshdx{
   display: none;
@@ -97,9 +98,10 @@ body{
 }
 .body0{
   float: left;
-  height: 30px;
-  width: 100%;
-  background-color: rgb(45, 45, 165);
+  height: 35px;
+  background-color: rgb(15, 15, 45);
+  width: 85%;
+  margin-left: 10%;
 }
 body{
   background-color: rgb(15, 15, 45);
@@ -107,26 +109,26 @@ body{
 .line{
   float: left;
   height: 20px;
-  width: 100%;
+  width: 85%;
   background-color: rgb(15, 15, 45);
   font-size: 15px;
-  margin-left: 40px;
+  color: rgba(255, 255, 255, 0.832);
 }
 .line1{
   float: left;
-  height: 25px;
-  width: 100%;
+  height: 28px;
   background-color: rgb(15, 15, 45);
   font-size: 15px;
-  margin-left: 40px;
+  width: 80%;
+  margin-left: 10%;
   border-bottom: 2px solid white;
   margin-bottom: 5px;
+  color: rgb(237, 159, 159);
 }
 .address, .amount,.order{
-  color: white;
   float: left;
-  margin-left: 10px;
   width: 200px;
+
 }
 .order{
   width: 20px;
@@ -136,25 +138,35 @@ body{
   margin-right: 20px;
 }
 .amount{
+  float: left;
+  text-align: left;
+  width: 130px;
+}
+.amount1{
+  float: left;
   text-align: left;
   width: 180px;
+  margin-right: 10px;
 }
-.sort,.sort1{
+.sort{
   float: left;
-  
+  color: white;
+  border: none;
+  background-color: rgb(38, 44, 130);
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px;
 }
 .sort1{
   float: left;
   color: white;
-  margin-left: 500px;
   font-size: 16px;
+  padding: 3px;
 }
 
 @media screen and (max-width: 900px){
   .App {
-
-    font-size:8px;
-
+    font-size: 6px;
   }
   body{
     background-color: rgb(255, 255, 255);
@@ -166,48 +178,39 @@ body{
     height: 30px;
     padding: 3px;
     background-color: rgb(6, 16, 54);
-  
   }
-  .checkbox{
-    position: absolute;
-    float: left;
-    margin-left: 6%;
-    font-size: 10px;
-    margin-top: 30px;
-  }
+
   .hydranet{
-    font-size: 15px;
-    margin-left: 6%;
+    font-size:15px;
+    margin-left: 0%;
     position: relative;
     float: left;
   }
   .hdxlogo{
     position: relative;
     float: left;
-    height: 25px;
-    width: 25px;
-    margin-top: 4px;
+    height: 20px;
+    width: 20px;
+    margin-top: 2px;
     margin-left: 6px;
   }
   .Navbar{
     background-color: #020730;
-    height: 35px;
+    height: 25px;
     color:azure;
-    padding: 5px;
+    padding: 1px;
     margin-top: 5px;
   }
   .nav{
     position: relative;
     float: left;
     margin-left: 20px;
-    font-size:10px;
     font-size: 15px;
     }
   .navs{
     float: right;
     float: top;
     margin-right: 20%;
-    
   }
   .navnumber{
     position: absolute;
@@ -215,7 +218,6 @@ body{
     margin-top: 30px;
     margin-left: 20px;
     color: rgb(192, 255, 255);
-    
   }
   .navtext{
     position: relative;
@@ -224,7 +226,7 @@ body{
     color: rgb(1, 183, 183);
   }
   .btn-primary{
-    font-size: 20px;
+    font-size: 8px;
     position: absolute;
     right: 0;
     margin-right: 6%;
@@ -234,7 +236,8 @@ body{
     display: block;
     float: left;
     height: 1500px;
-    width: 100%;
+    width: 95%;
+    margin-left: 0%;
   }
   .bodyshdx{
     display: none;
@@ -250,56 +253,72 @@ body{
   }
   .body0{
     float: left;
-    height: 30px;
-    width: 100%;
-    background-color: rgb(45, 45, 165);
+    height: 18px;
+    background-color: rgb(15, 15, 45);
+    width: 99%;
+    margin-left: 0%;
   }
   body{
     background-color: rgb(15, 15, 45);
   }
   .line{
     float: left;
-    height: 20px;
-    width: 100%;
+    height: 13px;
+    width: 99%;
     background-color: rgb(15, 15, 45);
-    font-size:7px;
-    margin-left: 0px;
+    font-size:6px;
+    color: rgba(255, 255, 255, 0.832);
   }
   .line1{
     float: left;
-    height: 25px;
-    width: 100%;
+    height: 14px;
     background-color: rgb(15, 15, 45);
-    font-size: 6px;
-    margin-left:0px;
-    border-bottom: 2px solid white;
+    font-size:6px;
+    width: 99%;
+    margin-left: 0%;
+    border-bottom: 1px solid white;
     margin-bottom: 5px;
+    color: rgb(237, 159, 159);
   }
   .address, .amount,.order{
-    color: white;
     float: left;
-    margin-left: 0px;
     width: 50px;
+  
   }
   .order{
     width: 20px;
   }
   .address{
-    width: 160px;
-    margin-right: 10px;
+    width: 150px;
+    margin-right: 7px;
   }
   .amount{
-    text-align: left;
-    width: 45px;
-  }
-  .sort,.sort1{
     float: left;
+    text-align: left;
+    width: 40px;
+  }
+  .amount1{
+    float: left;
+    text-align: left;
+    width: 80px;
+    margin-right: 2px;
+  }
+  .sort{
+    float: left;
+    color: white;
+    border: none;
+
+    font-size: 7px;
+    border-radius: 3px;
     
+    padding: 3px;
+    padding-top: 1px;
+    padding-bottom: 1px;
   }
   .sort1{
     float: left;
     color: white;
-    margin-left: 00px;
-    font-size: 8px;
+    font-size:7px;
+    padding: 2px;
   }
 }
