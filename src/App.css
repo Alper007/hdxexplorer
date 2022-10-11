@@ -300,6 +300,13 @@ body{
   .amount1{
     float: left;
     text-align: left;
+    width: 51px;
+    margin-right: 2px;
+    margin-left: 14px;
+  }
+  .amount1t{
+    float: left;
+    text-align: left;
     width: 65px;
     margin-right: 2px;
   }
