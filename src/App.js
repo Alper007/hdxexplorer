@@ -386,16 +386,16 @@ var allobj = {
       <div className='body0' id='body0' >
         <div className='sort1'>SORT BY:</div>
         <div className='sort1'>
-            <button className='sort' onClick={()=>{changeCoin("allmap"); setCoin("ALL")}}>hdx+shdx+(ghdx*1.42)</button>
+            <button className='sort' onClick={()=>{changeCoin("allmap"); setCoin("ALL")}}>HDX+SHDX+(GHDX*1.42)</button>
         </div>
         <div className='sort1'>
-          <button className='sort' onClick={()=>{changeCoin("shdxmap"); setCoin("SHDX")}}>shdx</button>
+          <button className='sort' onClick={()=>{changeCoin("shdxmap"); setCoin("SHDX")}}>SHDX</button>
         </div>
         <div className='sort1'>
-            <button className='sort' onClick={()=>{changeCoin("hdxmap"); setCoin("HDX")}}>hdx</button>
+            <button className='sort' onClick={()=>{changeCoin("hdxmap"); setCoin("HDX")}}>HDX</button>
         </div>
         <div className='sort1'>
-          <button className='sort' onClick={()=>{changeCoin("ghdxmap"); setCoin("GHDX")}}>ghdx</button>
+          <button className='sort' onClick={()=>{changeCoin("ghdxmap"); setCoin("GHDX")}}>GHDX</button>
         </div>
         
       </div>
